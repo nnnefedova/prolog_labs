@@ -1,0 +1,146 @@
+
+state(1 , " the US", america, 331.9  ).
+state(2 , " the UK", europe ,  67.33).
+state(3 ,  " France", europe , 68) .
+state(4 ,  " Spain", europe, 47.5 ).
+state(5 ,  " Monaco", europe, 0.0367 ).
+state(6 ,  " Turkey", europe_asia, 84.7 ).
+
+
+capital( 1,"Washington D.C ", "7.74 millions").
+capital( 2,"London ", "8.98 millions" ).
+capital( 3,"Paris", "2.16 millions" ).
+capital( 4,"Madrid", "3.22 millions" ).
+capital( 5,"Monte Carlo", "3 thousands").
+capital( 6,"Ankara", "5.66 millions" ).
+
+
+system_of_goverment( 1, republic ).
+system_of_goverment( 2, monarchy).
+system_of_goverment( 3, republic ).
+system_of_goverment( 4, monarchy).
+system_of_goverment( 5, monarchy).
+system_of_goverment( 6, republic).
+
+
+
+religion( 1, protestants , "70 procent" ).
+religion( 2, christianity, "50 procent").
+religion( 3, christianity , "66 procent").
+religion( 4, catholicism, "50 procent").
+religion( 5, christianity, "86 procent").
+religion( 6, muslim , "90 procent").
+
+
+languag( 1, english ).
+languag( 2, english ).
+languag( 3, french).
+languag( 4, english).
+languag( 5, french).
+languag( 6, turkish).
+
+
+unesco( 1, "24 objects ").
+unesco( 2, "33 objects" ).
+unesco( 3, "52 objects").
+unesco( 4, "49 objects").
+unesco( 5, " no objects :( ").
+unesco( 6, "21 objects").
+
+unesco1( 1,24).
+unesco1( 2,33).
+unesco1( 3, 52).
+unesco1( 4, 49 ).
+unesco1( 5, 0).
+unesco1( 6, 21).
+
+
+
+territory( 1, 9833517 ).
+territory( 2, 243610).
+territory( 3, 675417 ).
+territory( 4, 506030).
+territory( 5, 2).
+territory( 6, 783562).
+
+
+
+ecology( 1, "second" ).
+ecology( 2, "fortythree" ).
+ecology( 3, "therteen").
+ecology( 3, "twentyseven").
+ecology( 5, "one_hundred" ).
+ecology( 6, "not_found").
+
+
+
+education( 1, "top of the list", "University of Oxford" , "University of Cambridge" ).
+education( 2, "top of the list", "The Ivy League: Harvard University", "Massachusetts Institute of Technology ").
+education( 3,"47-1500 positions" , "Paris Sciences et Lettres", "Sorbonne University").
+education( 3, "182-1500 positions", "University of Barcelona", "Autonomous University of Barcelona").
+education( 5,"101", "International University Monaco - one university", "none").
+education( 6, "350 - 1500", "Cankaya University", "Koc University ").
+
+
+
+access_to_sea( 1,  "Beaufort Sea").
+access_to_sea( 1,  "Bering Sea?").
+access_to_sea( 1,  "Chukchi Sea?").
+
+access_to_sea( 2,  "Irish Sea" ).
+access_to_sea( 2,  "North Sea").
+access_to_sea( 2, "English channel").
+
+access_to_sea( 3,  "North Sea").
+access_to_sea( 3, "English channel").
+access_to_sea( 3, "Mediterranean Sea").
+
+access_to_sea(4 ,  "Mediterranean Sea").
+access_to_sea(4 , "Cantabrian Sea").
+
+access_to_sea( 5 , "Mediterranean Sea").
+
+access_to_sea( 6 , "Mediterranean Sea").
+access_to_sea(6 , "the Aegean").
+access_to_sea(6 , "Black Sea").
+ 
+
+economy( 1, 1 ).
+economy( 2, 6).
+economy( 3, 7 ).
+economy( 3, 15).
+economy( 5, 153 ).
+economy( 6, 19).
+
+
+tourism( 1, 2).
+tourism( 2, 8).
+tourism( 3, 4).
+tourism( 3, 3 ).
+tourism( 5, 6).
+tourism( 6, 45).
+
+
+
+metro_daily_ridership( 1, 0.597 ).
+metro_daily_ridership( 2, 3.21).
+metro_daily_ridership( 3, 4.18).
+metro_daily_ridership( 4, 1.74).
+metro_daily_ridership( 5, 0 ).
+metro_daily_ridership( 6, 0.310).
+
+
+metro_opening_date( 1, 1976).
+metro_opening_date( 2, 1863).
+metro_opening_date( 3, 1990).
+metro_opening_date( 4, 1919).
+metro_opening_date( 5, 0).
+metro_opening_date( 6, 1996).
+
+metro_type( 1, "metro").
+metro_type( 2, "underground").
+metro_type( 3, "metro").
+metro_type( 4, "metro").
+metro_type( 5, "none").
+metro_type( 6, "metro").
+
