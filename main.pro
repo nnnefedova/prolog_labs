@@ -31,6 +31,71 @@ class facts - countriesDb
 class facts
     count : (integer Amount) single.
 
+%LISTS
+class predicates
+    lists_Capital_In_Partoftheworld : (partoftheworld Partoftheworld) -> string* Capital1 determ.
+clauses
+    lists_Capital_In_Partoftheworld(X) = List :-
+        !,
+        List =
+            [ NameCapital ||
+                state(Id, _, X, _),
+                capital(Id, NameCapital, _)
+            ].
+%Lists by the elements
+
+class predicates
+    lists_Capital_In_Partoftheworld1 : (partoftheworld Partoftheworld) -> real* Capital1 determ.
+clauses
+    lists_Capital_In_Partoftheworld1(X) = List :-
+        !,
+        List =
+            [ Population ||
+                state(_, _, X, Population)
+                %capital(Id, _, _)
+            ].
+
+class predicates
+    write_list : (List*).
+clauses
+%пустой
+    write_list([]).
+%список из 1-го элемента
+    write_list([H]) :-
+        write(H, "."),
+        !.
+    write_list([H | T]) :-
+        write(H, ", "),
+        nl,
+        write_list(T).
+
+%lenght
+class predicates
+    length_of : (A*, integer Amount [out]).
+clauses
+    length_of([], 0).
+    length_of([_ | T], Amount + 1) :-
+        length_of(T, Amount).
+
+%sum
+class predicates  %Вспомогательные предикаты
+    сумма_элем : (real* List) -> real Sum.
+clauses
+    сумма_элем([]) = 0.
+    сумма_элем([H | T]) = сумма_элем(T) + H.
+
+%search an element
+class predicates
+    contains : (string Capital, string* List) determ.
+clauses
+    contains(Capital, []) :-
+        write("No").
+    contains(Capital, [Capital | _]) :-
+        !,
+        write("Yes").
+    contains(Capital, [_ | T]) :-
+        contains(Capital, T).
+
 clauses
     count(0).
 
@@ -109,6 +174,51 @@ clauses
 
     run() :-
         amount_of_objects(),
+        nl,
+        fail.
+
+    %список вывод
+    run() :-
+        L = lists_Capital_In_Partoftheworld(europe),
+        write(L),
+        nl,
+        nl,
+        fail.
+
+    run() :-
+        write_list(lists_Capital_In_Partoftheworld(europe)),
+        nl,
+        nl,
+        fail.
+
+%lenght output
+    run() :-
+        write("Amount of capitals in Europe "),
+        length_of(lists_Capital_In_Partoftheworld(europe), Amount),
+        write(Amount),
+        nl,
+        nl,
+        fail.
+
+    run() :-
+        write("Sum of population of capitals in europe "),
+        write(сумма_элем(lists_Capital_In_Partoftheworld1(europe))),
+        nl,
+        nl,
+        fail.
+
+    run() :-
+        write("Monte Carlo is in a list 'capital' "),
+        nl,
+        contains("Monte Carl", lists_Capital_In_Partoftheworld(europe)),
+        nl,
+        fail.
+
+    run() :-
+        write("Monte Carlo is in a list 'capital' "),
+        nl,
+        contains("Monte Carlo", lists_Capital_In_Partoftheworld(europe)),
+        nl,
         fail.
 
     run().
